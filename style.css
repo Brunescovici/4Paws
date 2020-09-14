@@ -1,0 +1,25 @@
+.outline {
+    border: 3px solid #FFC726;
+    position: relative;
+    color: black;
+    font-size: 16pt;
+    line-height: 50px;
+    top: -9px;
+    left: -14px;
+    width: 195px;
+    height: 55px;
+}
+
+button {
+    background-color: #ECDFCE;
+    border: 0px;
+    width: 200px;
+    height: 60px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+main {
+    background-color: white;
+}
