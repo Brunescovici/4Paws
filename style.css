@@ -14,6 +14,7 @@
 
 body {
 	margin: 0;
+	overflow-y: hidden;
 }
 
 /* 1. VARIABLES*/
@@ -27,7 +28,6 @@ body {
 .headerImg {
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
 }
 
 
