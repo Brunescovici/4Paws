@@ -12,22 +12,51 @@
 
 @import url("https://use.typekit.net/hdt8czr.css");
 
+html {scroll-behavior: smooth;}
 body {
 	margin: 0;
 	overflow-y: hidden;
 }
 
+
 /* 1. VARIABLES*/
 :root {
 	--4paws-font: verveine, sans-serif;
 	--mainText-font: montserrat, sans-serif;
+	--headings-weight: 500;
 }
 
 
 /* 2. HEADER AND NAVIGATION*/
+#mainNav ul {
+	text-align: end;
+	background-color: rgba(255, 255, 255, 0.2);
+	margin: 0;
+	padding: .6em;
+}
+
+#mainNav ul li {
+	font-family: var(--mainText-font);
+	font-size: 25px;
+	font-weight: 600;
+	color: white;
+	display: inline;
+	padding: 0.7em;
+}
+
 .headerImg {
+	position: absolute;
+	top: 0;
+	z-index: -1;
 	width: 100%;
-	height: 100%;
+}
+
+h1 {
+	font-family: var(--4paws-font);
+	font-size: 200px;
+	color: rgba(255, 255, 255, 0.7);
+	margin-top: 400px;
+	margin-left: 100px;
 }
 
 
