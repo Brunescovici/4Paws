@@ -57,3 +57,39 @@ button {
 main {
     background-color: white;
 }
+
+/* FOOTER */
+footer {
+height: 160px;
+background-color: rgba(15,107,87,0.8);
+}
+
+.footernav {
+    display: flex;
+    column-gap: 70px;
+    justify-content: flex-end;
+    margin-right: 230px;
+    padding-top: 50px;
+}
+
+footer h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin: 2px;
+    font-weight: 550;
+}
+
+footer p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin: 1px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+}
+
