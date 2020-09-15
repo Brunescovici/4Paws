@@ -6,15 +6,22 @@
 	5. TEXT STYLE
 	6. GRID
 	7. SHELTERS
-	8. CAROUSEL
+	8. CAROUSEL - SPONROS
 	9. MODAL*/
 
 
+@import url("https://use.typekit.net/hdt8czr.css");
+
 body {
 	margin: 0;
+	overflow-y: hidden;
 }
 
 /* 1. VARIABLES*/
+:root {
+	--4paws-font: verveine, sans-serif;
+	--mainText-font: montserrat, sans-serif;
+}
 
 
 /* 2. HEADER AND NAVIGATION*/
