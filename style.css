@@ -12,7 +12,9 @@
 
 @import url("https://use.typekit.net/hdt8czr.css");
 
-html {scroll-behavior: smooth;}
+html {
+    scroll-behavior: smooth;
+}
 body {
 	margin: 0;
 	overflow-x: hidden;
@@ -24,10 +26,16 @@ body {
 	--4paws-font: verveine, sans-serif;
 	--mainText-font: montserrat, sans-serif;
 	--headings-weight: 500;
+    --header-color: #3D3D3D;
 }
 
 
 /* 2. HEADER AND NAVIGATION*/
+
+header {
+    margin-bottom: 16%;
+}
+
 #mainNav ul {
 	text-align: end;
 	background-color: rgba(255, 255, 255, 0.2);
@@ -51,7 +59,7 @@ body {
 	width: 100%;
 }
 
-h1 {
+header>h1 {
 	font-family: var(--4paws-font);
 	font-size: 200px;
 	color: rgba(255, 255, 255, 0.7);
@@ -84,7 +92,24 @@ button {
 }
 
 main {
-    background-color: white;
+    background-color: transparent;
+}
+
+#about4Paws {
+    text-align: center;
+    width: 600px;
+    margin: auto;
+}
+
+#about4Paws>h1 {
+    font-family: var(--mainText-font);
+    color: var(--header-color);
+    font-size: 52px;
+    font-weight: 800;
+}
+
+#about4Paws>p {
+    font-size: 15px;
 }
 
 /* FOOTER */
