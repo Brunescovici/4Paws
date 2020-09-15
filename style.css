@@ -21,6 +21,7 @@ body {
 :root {
 	--4paws-font: verveine, sans-serif;
 	--mainText-font: montserrat, sans-serif;
+    --header-color: #3D3D3D;
 }
 
 
@@ -55,5 +56,24 @@ button {
 }
 
 main {
-    background-color: white;
+    background-color: #FBFBFB;
+    display: flex;
+    flex-direction: column;
+}
+
+#about4Paws {
+    text-align: center;
+    width: 600px;
+    margin: auto;
+}
+
+h1 {
+    font-family: var(--mainText-font);
+    color: var(--header-color);
+    font-size: 52px;
+    font-weight: 800;
+}
+
+#about4Paws>p {
+    font-size: 15px;
 }
