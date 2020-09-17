@@ -54,17 +54,27 @@ function ready() {
     document.querySelectorAll('.shelter').forEach(item => {
             item.addEventListener('click', selectShelter);
         })
-    document.querySelector("#selectedShelter>button").addEventListener('click', openModal);
+    document.querySelector("#selectedShelter>button").addEventListener('click', showPets);
     document.querySelector(".modalContent").addEventListener('click', dontClose);
     document.querySelector(".modalBackground").addEventListener('click', closeModal);
+    document.querySelector("#pet1").addEventListener('click', openModal);
+    document.querySelector("#pet2").addEventListener('click', openModal);
+    document.querySelector("#pet3").addEventListener('click', openModal);
+    document.querySelector("#pet4").addEventListener('click', openModal);
 }
 
 function dontClose() {
     close = 0;
 }
 
+function showPets() {
+    document.querySelector("#selectedShelter>button").style.display = "none";
+    document.querySelector("#pets").style.display = "flex";
+}
+
 function openModal() {
     document.querySelector(".modalBackground").style.display = "block";
+    document.querySelector(".modalImg").src = this.src;
 }
 
 function closeModal() {
@@ -96,6 +106,7 @@ function selectShelter() {
     }
 
     document.querySelector("#selectedShelter").style.display = "none";
+    document.querySelector("#pets").style.display="none";
     document.querySelector("#selectedShelter").classList.remove("zoomIn_anim");
     document.querySelector("#selectedShelter>p").classList.remove("fadeIn_anim");
     document.querySelector("#selectedShelter>img").classList.remove("fadeIn_anim");
@@ -134,6 +145,5 @@ function selectShelter() {
         item.style.display = "grid";
     })
     this.style.display = "none";
-    document.querySelector("#pets").style.display = "flex";
     document.querySelector("#ourSheltersHeader").scrollIntoView();
 }

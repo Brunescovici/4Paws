@@ -262,6 +262,19 @@ h3 {
     flex-direction: row;
 }
 
+#pet1 {
+    cursor: pointer;
+}
+#pet2 {
+    cursor: pointer;
+}
+#pet3 {
+    cursor: pointer;
+}
+#pet4 {
+    cursor: pointer;
+}
+
 #pets>img {
     width: 150px;
     height: 150px;
