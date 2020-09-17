@@ -80,6 +80,7 @@ button {
 	background-color: #FFC726;
 	outline: 3px solid #FFC726;
 	outline-offset: 4px;
+    margin-bottom: 30px;
 	font-weight: 700;
 	font-size: 25px;
 	border: none;
@@ -254,6 +255,18 @@ h3 {
     width: 90%;
     max-width: 800px;
     object-fit: cover;
+}
+
+#pets {
+    display: none;
+    flex-direction: row;
+}
+
+#pets>img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 15px 20px;
 }
 
 /* 6. ANIMATIONS */

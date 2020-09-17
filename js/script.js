@@ -2,6 +2,8 @@ const link = "https://spreadsheets.google.com/feeds/list/1wKdqch4zf6crJaZByvRmcq
 
 window.addEventListener("DOMContentLoaded", getData);
 
+let close = 1;
+
 function getData() {
     fetch(link)
         .then(res => res.json())
@@ -15,6 +17,8 @@ function handleData(data) {
     myData.forEach(showData);
     ready();
 }
+
+
 
 function showData(singleRowData) {
     console.log("singleROWDATA");
@@ -50,15 +54,54 @@ function ready() {
     document.querySelectorAll('.shelter').forEach(item => {
             item.addEventListener('click', selectShelter);
         })
+    document.querySelector("#selectedShelter>button").addEventListener('click', openModal);
+    document.querySelector(".modalContent").addEventListener('click', dontClose);
+    document.querySelector(".modalBackground").addEventListener('click', closeModal);
 }
 
+function dontClose() {
+    close = 0;
+}
+
+function openModal() {
+    document.querySelector(".modalBackground").style.display = "block";
+}
+
+function closeModal() {
+    if(close)
+        document.querySelector(".modalBackground").style.display = "none";
+    else
+        close=1;
+}
 
 function selectShelter() {
+
+    let i = 1;
+
+    fetch(link)
+        .then(res => res.json())
+        .then(handleData2);
+    const name = this.querySelector("h1").textContent;
+    function handleData2(data) {
+        const myData = data.feed.entry;
+        myData.forEach(setPets);
+    }
+
+    function setPets(oneRowData) {
+        if(oneRowData.gsx$value.$t == name)
+            {
+                document.querySelector("#pet"+i).src = "assets/" + oneRowData.gsx$imgsource.$t + ".jpg";
+                i++;
+            }
+    }
+
     document.querySelector("#selectedShelter").style.display = "none";
     document.querySelector("#selectedShelter").classList.remove("zoomIn_anim");
     document.querySelector("#selectedShelter>p").classList.remove("fadeIn_anim");
     document.querySelector("#selectedShelter>img").classList.remove("fadeIn_anim");
+    document.querySelector("#selectedShelter>button").classList.remove("fadeIn_anim");
     document.querySelector("#selectedShelter>p").style.display = "none";
+    document.querySelector("#selectedShelter>button").style.display = "none";
     setTimeout(function() {
             document.querySelector("#selectedShelter").style.display = "flex";
             document.querySelector("#selectedShelter").classList.add("zoomIn_anim");
@@ -70,6 +113,9 @@ function selectShelter() {
     document.querySelector("#selectedShelter>p").style.display = "block";
     document.querySelector("#selectedShelter>p").style.opacity = "0%";
     document.querySelector("#selectedShelter>img").style.opacity = "0%";
+    document.querySelector("#selectedShelter>button").style.opacity = "0%";
+    document.querySelector("#selectedShelter>button").style.display = "block";
+
     setTimeout(function() {
             document.querySelector("#selectedShelter>p").classList.add("fadeIn_anim");
             document.querySelector("#selectedShelter>img").classList.add("fadeIn_anim");
@@ -78,9 +124,16 @@ function selectShelter() {
             document.querySelector("#selectedShelter>p").style.opacity = "100%";
             document.querySelector("#selectedShelter>img").style.opacity = "100%";
     }, 1600)
+    setTimeout(function() {
+            document.querySelector("#selectedShelter>button").classList.add("fadeIn_anim");
+    }, 1800)
+    setTimeout(function() {
+            document.querySelector("#selectedShelter>button").style.opacity = "100%";
+    }, 2000)
     document.querySelectorAll('.shelter').forEach(item => {
         item.style.display = "grid";
     })
     this.style.display = "none";
+    document.querySelector("#pets").style.display = "flex";
     document.querySelector("#ourSheltersHeader").scrollIntoView();
 }
