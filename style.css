@@ -1,5 +1,6 @@
 /*
 CONTENT
+<<<<<<< HEAD
 	1. VARIABLES
 	2. HEADER AND NAVIGATION
 	3. SVGS AND IMGS
@@ -10,6 +11,18 @@ CONTENT
 	8. SPONSORS
 	9. MODAL
 	10. FOOTER
+=======
+	VARIABLES
+	HEADER AND NAVIGATION
+	IMGS
+	BUTTONS
+	TEXT STYLE
+	SHELTERS
+	SPONSORS
+	MODAL
+	FOOTER
+	MEDIA QUERY
+>>>>>>> kali
 */
 
 @import url("https://use.typekit.net/hdt8czr.css");
@@ -54,38 +67,23 @@ body {
 	width: 100%;
 }
 
-/* 3. SVG AND IMG*/
+/* 3. IMG*/
+#icons {display: inline-flex;}
+#icons img {
+	width: 60px;
+	height: 60px;
+	margin: 30px 10px;
+}
 
 /* 4. BUTTONS*/
-.outline {
-    border: 3px solid #FFC726;
-    position: relative;
-    color: black;
-    font-size: 16pt;
-    line-height: 50px;
-    top: -9px;
-    left: -14px;
-    width: 195px;
-    height: 55px;
-}
-
-button {
-    background-color: #ECDFCE;
-    border: 0px;
-    width: 200px;
-    height: 60px;
-    position: relative;
-    top: 20px;
-    left: 20px;
-}
 
 /* 5. TEXT STYLE*/
 h1,
-h3,
 p {
 	margin: 10px 25px;
 	font-family: var(--mainText-font)
 }
+
 #about4Paws {
     text-align: center;
     width:  80%;
@@ -109,8 +107,9 @@ main p {
 
 h3 {
 	color: var(--header-color);
-    font-size: 16pt;
-    font-weight: 300;
+    font-size: 35px;
+    font-weight: 700;
+	text-transform: uppercase;
     font-family: var(--mainText-font);
 }
 
@@ -291,13 +290,11 @@ h3 {
 	outline-offset: 10px;
 }
 
-#leftModal {
-	width: 50%;
-}
+#leftModal {width: 50%;}
 
 .modalImg {
 	width: 20rem;
-	height: 20rem;
+	height: 25rem;
 	object-fit: cover;
 }
 
