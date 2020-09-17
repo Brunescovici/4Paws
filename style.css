@@ -26,11 +26,11 @@ body {
 	--mainText-font: montserrat, sans-serif;
 	--headings-weight: 500;
     --header-color: #3D3D3D;
+    --border-color: #FFC726;
 }
 
 
 /* 2. HEADER AND NAVIGATION*/
-header {height: 90vmin;}
 #mainNav ul {
 	text-align: end;
 	background-color: rgba(255, 255, 255, 0.2);
@@ -48,11 +48,10 @@ header {height: 90vmin;}
 }
 
 .headerImg {
-	position: absolute;
+	position: relative;
 	z-index: -1;
-	top: 0;
+	top: -45px;
 	width: 100%;
-	margin-bottom: 100px;
 }
 
 /* 3. SVG AND IMG*/
@@ -81,8 +80,16 @@ button {
 }
 
 /* 5. TEXT STYLE*/
-h1, p { margin: 0 20%;}
-#about4Paws {text-align: center;}
+h1, p { margin: 10px 25px;}
+#about4Paws {
+    text-align: center;
+    width:  80%;
+    max-width: 800px;
+    margin: auto;
+    border-left: 4px solid var(--border-color);
+    border-top: 4px solid var(--border-color);
+}
+
 main h1 {
     font-family: var(--mainText-font);
     color: var(--header-color);
@@ -95,7 +102,6 @@ main p {
     font-size: 15px;
 	font-family: var(--mainText-font);
 }
-
 
 
 /* 10. FOOTER */
