@@ -73,6 +73,18 @@ body {
 }
 
 /* 4. BUTTONS*/
+button {
+	padding: 20px 50px;
+	color: white;
+	font-family: var(--mainText-font);
+	background-color: #FFC726;
+	outline: 3px solid #FFC726;
+	outline-offset: 4px;
+	font-weight: 700;
+	font-size: 25px;
+	border: none;
+	cursor: pointer;
+}
 
 /* 5. TEXT STYLE*/
 h1,
@@ -312,6 +324,7 @@ h3 {
 
 /* 10. FOOTER */
 footer {
+	margin-top: 100px;
 	height: 200px;
 	background-color: rgba(15, 107, 87, 0.8);
 }
