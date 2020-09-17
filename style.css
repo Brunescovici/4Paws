@@ -1,4 +1,5 @@
-/* CONTENT
+/*
+CONTENT
 	1. VARIABLES
 	2. HEADER AND NAVIGATION
 	3. SVGS AND IMGS
@@ -6,15 +7,13 @@
 	5. TEXT STYLE
 	6. GRID
 	7. SHELTERS
-	8. CAROUSEL - SPONROS
-	9. MODAL*/
-
+	8. SPONSORS
+	9. MODAL
+	10. FOOTER
+*/
 
 @import url("https://use.typekit.net/hdt8czr.css");
-
-html {
-    scroll-behavior: smooth;
-}
+html {scroll-behavior: smooth;}
 body {
 	margin: 0;
 	overflow-x: hidden;
@@ -31,11 +30,7 @@ body {
 
 
 /* 2. HEADER AND NAVIGATION*/
-
-header {
-    margin-bottom: 16%;
-}
-
+header {height: 90vmin;}
 #mainNav ul {
 	text-align: end;
 	background-color: rgba(255, 255, 255, 0.2);
@@ -45,7 +40,7 @@ header {
 
 #mainNav ul li {
 	font-family: var(--mainText-font);
-	font-size: 25px;
+	font-size: 1.3rem;
 	font-weight: 600;
 	color: white;
 	display: inline;
@@ -54,21 +49,15 @@ header {
 
 .headerImg {
 	position: absolute;
-	top: 0;
 	z-index: -1;
+	top: 0;
 	width: 100%;
+	margin-bottom: 100px;
 }
 
-header>h1 {
-	font-family: var(--4paws-font);
-	font-size: 200px;
-	color: rgba(255, 255, 255, 0.7);
-	margin-top: 400px;
-	margin-left: 100px;
-}
+/* 3. SVG AND IMG*/
 
-
-
+/* 4. BUTTONS*/
 .outline {
     border: 3px solid #FFC726;
     position: relative;
@@ -91,31 +80,28 @@ button {
     left: 20px;
 }
 
-main {
-    background-color: transparent;
-}
-
-#about4Paws {
-    text-align: center;
-    width: 600px;
-    margin: auto;
-}
-
-#about4Paws>h1 {
+/* 5. TEXT STYLE*/
+h1, p { margin: 0 20%;}
+#about4Paws {text-align: center;}
+main h1 {
     font-family: var(--mainText-font);
     color: var(--header-color);
     font-size: 52px;
     font-weight: 800;
+	margin-bottom: 0;
 }
 
-#about4Paws>p {
+main p {
     font-size: 15px;
+	font-family: var(--mainText-font);
 }
 
-/* FOOTER */
+
+
+/* 10. FOOTER */
 footer {
-height: 160px;
-background-color: rgba(15,107,87,0.8);
+	height: 180px;
+	background-color: rgba(15, 107, 87, 0.8);
 }
 
 .footernav {
@@ -146,4 +132,3 @@ footer p {
     text-align: center;
     margin-top: 30px;
 }
-
