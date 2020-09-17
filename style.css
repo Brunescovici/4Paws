@@ -5,11 +5,10 @@ CONTENT
 	3. SVGS AND IMGS
 	4. BUTTONS
 	5. TEXT STYLE
-	6. GRID
-	7. SHELTERS
-	8. SPONSORS
-	9. MODAL
-	10. FOOTER
+	6. SHELTERS
+	7. SPONSORS
+	8. MODAL
+	9. FOOTER
 */
 
 @import url("https://use.typekit.net/hdt8czr.css");
@@ -80,7 +79,12 @@ button {
 }
 
 /* 5. TEXT STYLE*/
-h1, p { margin: 10px 25px;}
+h1,
+h3,
+p {
+	margin: 10px 25px;
+	font-family: var(--mainText-font)
+}
 #about4Paws {
     text-align: center;
     width:  80%;
@@ -91,7 +95,6 @@ h1, p { margin: 10px 25px;}
 }
 
 main h1 {
-    font-family: var(--mainText-font);
     color: var(--header-color);
     font-size: 52px;
     font-weight: 800;
@@ -99,6 +102,12 @@ main h1 {
 }
 
 main p {
+    font-size: 1.1rem;
+	font-weight: 300;
+}
+
+h3 {
+	color: var(--header-color);
     font-size: 16pt;
     font-weight: 300;
     font-family: var(--mainText-font);
@@ -157,9 +166,41 @@ main p {
     align-items: center;
 }
 
+/* 9. MODAL*/
+.modalBackground {
+	display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+	width: 100%;
+	height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modalContent {
+	background-color: #fefefe;
+	display: flex;
+	margin: 5% auto;
+	padding: 3rem;
+	width: 50vw;
+	outline: 4px solid #FFC726;
+	outline-offset: 10px;
+}
+
+#leftModal {
+	width: 50%;
+}
+
+.modalImg {
+	width: 20rem;
+	height: 20rem;
+	object-fit: cover;
+}
+
 /* 10. FOOTER */
 footer {
-	height: 180px;
+	height: 200px;
 	background-color: rgba(15, 107, 87, 0.8);
 }
 
@@ -173,17 +214,16 @@ footer {
 
 footer h1 {
     color: white;
-    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 18px;
     margin: 2px;
     font-weight: 550;
 }
 
 footer p {
     color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
+    font-size: 15px;
+	font-weight: 300;
     margin: 1px;
 }
 
