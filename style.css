@@ -108,11 +108,12 @@ main p {
     flex-direction: row;
     width: 80%;
     max-width: 1200px;
-    margin: auto;
+    margin: 150px auto;
+    align-items: center;
 }
 
 #adoptWithUs img {
-    width: 100%;
+    height: 30vh;
     margin-right: 50px;
 }
 
