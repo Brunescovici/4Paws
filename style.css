@@ -102,6 +102,7 @@ main h1 {
 }
 
 main p {
+<<<<<<< HEAD
     font-size: 1.1rem;
 	font-weight: 300;
 }
@@ -109,8 +110,65 @@ main p {
 h3 {
 	font-size: 2.5rem;
 	color: var(--header-color)
+=======
+    font-size: 16pt;
+    font-weight: 300;
+    font-family: var(--mainText-font);
 }
 
+#adoptWithUs {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 1200px;
+    margin: 150px auto;
+    align-items: center;
+}
+
+#adoptWithUs img {
+    height: 30vh;
+    margin-right: 50px;
+}
+
+.containerParagraphHeader {
+    border-right: 4px solid var(--border-color);
+    border-top: 4px solid var(--border-color);
+}
+
+.containerParagraphHeader h1 {
+    text-align: center;
+>>>>>>> origin/master
+}
+
+#volunteerWithUs {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+}
+
+#volunteerWithUs h1 {
+    text-align: center;
+/*    border-bottom: 4px solid var(--border-color);*/
+}
+
+#volunteerWithUs img {
+    width: 60%;
+}
+
+#volunteerParagraph {
+    border-left: 4px solid var(--border-color);
+    padding-left: 20px;
+}
+
+.containerImageParagraph {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* 9. MODAL*/
 .modalBackground {
