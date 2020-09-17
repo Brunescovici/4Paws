@@ -57,19 +57,27 @@ function selectShelter() {
     document.querySelector("#selectedShelter").style.display = "none";
     document.querySelector("#selectedShelter").classList.remove("zoomIn_anim");
     document.querySelector("#selectedShelter>p").classList.remove("fadeIn_anim");
+    document.querySelector("#selectedShelter>img").classList.remove("fadeIn_anim");
     document.querySelector("#selectedShelter>p").style.display = "none";
     setTimeout(function() {
             document.querySelector("#selectedShelter").style.display = "flex";
             document.querySelector("#selectedShelter").classList.add("zoomIn_anim");
-        }, 100)
+        }, 300)
 
     document.querySelector("#ourSheltersHeader").textContent = this.querySelector("h1").textContent;
     document.querySelector("#selectedShelter>img").src = this.querySelector("img").src;
     document.querySelector("#selectedShelter>p").textContent = this.querySelector(".description").textContent;
+    document.querySelector("#selectedShelter>p").style.display = "block";
+    document.querySelector("#selectedShelter>p").style.opacity = "0%";
+    document.querySelector("#selectedShelter>img").style.opacity = "0%";
     setTimeout(function() {
-            document.querySelector("#selectedShelter>p").style.display = "block";
             document.querySelector("#selectedShelter>p").classList.add("fadeIn_anim");
+            document.querySelector("#selectedShelter>img").classList.add("fadeIn_anim");
         }, 1400)
+    setTimeout(function() {
+            document.querySelector("#selectedShelter>p").style.opacity = "100%";
+            document.querySelector("#selectedShelter>img").style.opacity = "100%";
+    }, 1600)
     document.querySelectorAll('.shelter').forEach(item => {
         item.style.display = "grid";
     })
