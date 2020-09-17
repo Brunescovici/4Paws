@@ -103,6 +103,27 @@ main p {
 	font-family: var(--mainText-font);
 }
 
+#adoptWithUs {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#adoptWithUs img {
+    width: 100%;
+    margin-right: 50px;
+}
+
+.containerParagraphHeader {
+    border-right: 4px solid var(--border-color);
+    border-top: 4px solid var(--border-color);
+}
+
+.containerParagraphHeader h1 {
+    text-align: center;
+}
 
 /* 10. FOOTER */
 footer {
