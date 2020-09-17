@@ -17,6 +17,8 @@ function handleData(data) {
 
 function showData(singleRowData) {
     console.log("singleROWDATA");
-    console.log(singleRowData.gsx$longdesc.$t);
-    document.querySelector("#aboutParagraph").textContent = singleRowData.gsx$longdesc.$t;
+    console.log(singleRowData.gsx$id.$t);
+    if(singleRowData.gsx$id.$t == 1)
+        document.querySelector("#aboutParagraph").textContent = singleRowData.gsx$longdesc.$t;
+
 }
