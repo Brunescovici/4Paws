@@ -54,12 +54,24 @@ function ready() {
 
 
 function selectShelter() {
-    document.querySelector("#selectedShelter").style.display = "block";
+    document.querySelector("#selectedShelter").style.display = "none";
+    document.querySelector("#selectedShelter").classList.remove("zoomIn_anim");
+    document.querySelector("#selectedShelter>p").style.display = "none";
+    setTimeout(function() {
+            document.querySelector("#selectedShelter").style.display = "flex";
+            document.querySelector("#selectedShelter").classList.add("zoomIn_anim");
+        }, 100)
+
     document.querySelector("#ourSheltersHeader").textContent = this.querySelector("h1").textContent;
     document.querySelector("#selectedShelter>img").src = this.querySelector("img").src;
     document.querySelector("#selectedShelter>p").textContent = this.querySelector(".description").textContent;
+    document.querySelector("#selectedShelter").style.border = "none";
+    setTimeout(function() {
+            document.querySelector("#selectedShelter>p").style.display = "block";
+            document.querySelector("#selectedShelter").style.border = "block";
+        }, 2000)
     document.querySelectorAll('.shelter').forEach(item => {
-        item.style.display = "block";
+        item.style.display = "grid";
     })
     this.style.display = "none";
 

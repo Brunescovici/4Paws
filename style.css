@@ -5,10 +5,11 @@ CONTENT
 	3. SVGS AND IMGS
 	4. BUTTONS
 	5. TEXT STYLE
-	6. SHELTERS
-	7. SPONSORS
-	8. MODAL
-	9. FOOTER
+    6. ANIMATIONS
+	7. SHELTERS
+	8. SPONSORS
+	9. MODAL
+	10. FOOTER
 */
 
 @import url("https://use.typekit.net/hdt8czr.css");
@@ -147,7 +148,6 @@ h3 {
 
 #volunteerWithUs h1 {
     text-align: center;
-/*    border-bottom: 4px solid var(--border-color);*/
 }
 
 #volunteerWithUs img {
@@ -169,6 +169,7 @@ h3 {
 #sheltersContainer {
     display: grid;
     grid-template-columns: repeat(3, minmax(350px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(1fr, 350px));
     grid-row-gap: 50px;
     justify-items: center;
 }
@@ -189,6 +190,11 @@ h3 {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     transition: all 0.5s;
+}
+
+.shelter:hover {
+    opacity: 80%;
+    cursor: pointer;
 }
 
 .shelter>h1 {
@@ -222,9 +228,47 @@ h3 {
     display: none;
     grid-column: 1/-1;
     grid-row: 2/3;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 4px solid var(--border-color);
+    border-left: 4px solid var(--border-color);
+    border: none;
 }
 
-/* 9. MODAL*/
+#selectedShelter p {
+    width: 80%;
+    max-width: 900px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#selectedShelter img {
+    width: 100%;
+    max-width: 800px;
+    object-fit: cover;
+}
+
+/* 6. ANIMATIONS */
+
+.zoomIn_anim {
+    animation-duration: 2s;
+    animation-name: zoomIn;
+}
+
+@keyframes zoomIn {
+    from {
+        width: 0px;
+        height: 0px;
+    }
+
+    to {
+        width: 800px;
+        height: 800px;
+    }
+}
+
+
+/* 9. MODAL */
 .modalBackground {
 	display: none;
     position: fixed;
