@@ -22,8 +22,10 @@ function showData(singleRowData) {
         document.querySelector("#about4Paws>h1").textContent = singleRowData.gsx$shortdesc.$t;
         document.querySelector("#aboutParagraph").textContent = singleRowData.gsx$longdesc.$t;
     }
+
     else if(singleRowData.gsx$id.$t == 2) {
         document.querySelector("#adoptWithUs h1").textContent = singleRowData.gsx$shortdesc.$t;
         document.querySelector("#adoptParagraph").textContent = singleRowData.gsx$longdesc.$t;
+        document.querySelector("#adoptWithUs img").src = "assets/" + singleRowData.gsx$imgsource.$t + ".jpg";
     }
 }
