@@ -188,6 +188,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    transition: all 0.5s;
 }
 
 .shelter>h1 {
@@ -195,10 +196,12 @@ h3 {
     grid-row: 1/2;
     align-self: end;
     text-align: center;
+    max-width: 320px;
     color: white;
     font-family: var(--mainText-font);
     font-size: 24pt;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .shelter>img {
@@ -206,17 +209,19 @@ h3 {
     grid-row: 1/2;
     width: 20rem;
     height: 20rem;
-    max-width:  400px;
-    max-height: 400px;
+    max-width:  320px;
+    max-height: 320px;
     object-fit: cover;
 }
 
-.dontDisplay {
+.description {
     display: none;
 }
 
-.display {
-    display: block;
+#selectedShelter {
+    display: none;
+    grid-column: 1/-1;
+    grid-row: 2/3;
 }
 
 /* 9. MODAL*/

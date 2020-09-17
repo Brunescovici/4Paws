@@ -13,6 +13,7 @@ function handleData(data) {
     console.log("myDATA: ");
     console.log(myData);
     myData.forEach(showData);
+    ready();
 }
 
 function showData(singleRowData) {
@@ -34,4 +35,32 @@ function showData(singleRowData) {
         document.querySelector("#volunteerParagraph").innerHTML = singleRowData.gsx$longdesc.$t;
         document.querySelector("#volunteerWithUs img").src = "assets/" + singleRowData.gsx$imgsource.$t + ".jpg";
     }
+    else if(singleRowData.gsx$category.$t == "shelter") {
+        const myTemplate = document.querySelector("#shelterTemplate").content;
+        const shelterClone = myTemplate.cloneNode(true);
+        shelterClone.querySelector("h1").textContent = singleRowData.gsx$name.$t;
+        shelterClone.querySelector("img").src = "assets/" + singleRowData.gsx$imgsource.$t + ".jpg";
+        shelterClone.querySelector(".description").textContent = singleRowData.gsx$longdesc.$t;
+        const parent = document.querySelector("#sheltersContainer");
+        parent.appendChild(shelterClone);
+    }
+}
+
+function ready() {
+    document.querySelectorAll('.shelter').forEach(item => {
+            item.addEventListener('click', selectShelter);
+        })
+}
+
+
+function selectShelter() {
+    document.querySelector("#selectedShelter").style.display = "block";
+    document.querySelector("#ourSheltersHeader").textContent = this.querySelector("h1").textContent;
+    document.querySelector("#selectedShelter>img").src = this.querySelector("img").src;
+    document.querySelector("#selectedShelter>p").textContent = this.querySelector(".description").textContent;
+    document.querySelectorAll('.shelter').forEach(item => {
+        item.style.display = "block";
+    })
+    this.style.display = "none";
+
 }
