@@ -230,9 +230,10 @@ h3 {
     grid-row: 2/3;
     flex-direction: column;
     align-items: center;
+    width: 800px;
+    height: 800px;
     border-bottom: 4px solid var(--border-color);
     border-left: 4px solid var(--border-color);
-    border: none;
 }
 
 #selectedShelter p {
@@ -243,7 +244,7 @@ h3 {
 }
 
 #selectedShelter img {
-    width: 100%;
+    width: 90%;
     max-width: 800px;
     object-fit: cover;
 }
@@ -251,7 +252,7 @@ h3 {
 /* 6. ANIMATIONS */
 
 .zoomIn_anim {
-    animation-duration: 2s;
+    animation-duration: 1.3s;
     animation-name: zoomIn;
 }
 

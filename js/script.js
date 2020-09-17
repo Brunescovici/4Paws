@@ -65,11 +65,9 @@ function selectShelter() {
     document.querySelector("#ourSheltersHeader").textContent = this.querySelector("h1").textContent;
     document.querySelector("#selectedShelter>img").src = this.querySelector("img").src;
     document.querySelector("#selectedShelter>p").textContent = this.querySelector(".description").textContent;
-    document.querySelector("#selectedShelter").style.border = "none";
     setTimeout(function() {
             document.querySelector("#selectedShelter>p").style.display = "block";
-            document.querySelector("#selectedShelter").style.border = "block";
-        }, 2000)
+        }, 1400)
     document.querySelectorAll('.shelter').forEach(item => {
         item.style.display = "grid";
     })
