@@ -323,6 +323,15 @@ h3 {
 }
 
 /* 10. FOOTER */
+.footernav img {
+	width: 150px;
+	align-self: flex-start;
+	position: absolute;
+	left: 0;
+	margin-left: 230px;
+	filter: invert(1);
+}
+
 footer {
 	margin-top: 100px;
 	height: 200px;
