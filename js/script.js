@@ -56,6 +56,7 @@ function ready() {
 function selectShelter() {
     document.querySelector("#selectedShelter").style.display = "none";
     document.querySelector("#selectedShelter").classList.remove("zoomIn_anim");
+    document.querySelector("#selectedShelter>p").classList.remove("fadeIn_anim");
     document.querySelector("#selectedShelter>p").style.display = "none";
     setTimeout(function() {
             document.querySelector("#selectedShelter").style.display = "flex";
@@ -67,10 +68,11 @@ function selectShelter() {
     document.querySelector("#selectedShelter>p").textContent = this.querySelector(".description").textContent;
     setTimeout(function() {
             document.querySelector("#selectedShelter>p").style.display = "block";
+            document.querySelector("#selectedShelter>p").classList.add("fadeIn_anim");
         }, 1400)
     document.querySelectorAll('.shelter').forEach(item => {
         item.style.display = "grid";
     })
     this.style.display = "none";
-
+    document.querySelector("#ourSheltersHeader").scrollIntoView();
 }

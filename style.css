@@ -39,12 +39,22 @@ body {
 }
 
 #mainNav ul li {
-	font-family: var(--mainText-font);
+	display: inline;
+	padding: 0.7em;
+}
+
+#mainNav a {
+    font-family: var(--mainText-font);
 	font-size: 1.3rem;
 	font-weight: 600;
 	color: white;
-	display: inline;
-	padding: 0.7em;
+    text-decoration: none;
+    border-bottom: 2px white;
+    transition: all 0.2s;
+}
+
+#mainNav a:hover {
+    border-bottom: solid;
 }
 
 .headerImg {
@@ -256,6 +266,11 @@ h3 {
     animation-name: zoomIn;
 }
 
+.fadeIn_anim {
+    animation-duration: 0.5s;
+    animation-name: fadeIn;
+}
+
 @keyframes zoomIn {
     from {
         width: 0px;
@@ -265,6 +280,16 @@ h3 {
     to {
         width: 800px;
         height: 800px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
     }
 }
 
