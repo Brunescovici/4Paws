@@ -25,13 +25,13 @@ function showData(singleRowData) {
 
     else if(singleRowData.gsx$id.$t == 2) {
         document.querySelector("#adoptWithUs h1").textContent = singleRowData.gsx$shortdesc.$t;
-        document.querySelector("#adoptParagraph").textContent = singleRowData.gsx$longdesc.$t;
+        document.querySelector("#adoptParagraph").innerHTML = singleRowData.gsx$longdesc.$t;
         document.querySelector("#adoptWithUs img").src = "assets/" + singleRowData.gsx$imgsource.$t + ".jpg";
     }
 
     else if(singleRowData.gsx$id.$t == 3) {
         document.querySelector("#volunteerWithUs h1").textContent = singleRowData.gsx$shortdesc.$t;
-        document.querySelector("#volunteerParagraph").textContent = singleRowData.gsx$longdesc.$t;
+        document.querySelector("#volunteerParagraph").innerHTML = singleRowData.gsx$longdesc.$t;
         document.querySelector("#volunteerWithUs img").src = "assets/" + singleRowData.gsx$imgsource.$t + ".jpg";
     }
 }
