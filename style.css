@@ -130,6 +130,8 @@ h3 {
 	margin: 5% auto;
 	padding: 3rem;
 	width: 50vw;
+	outline: 4px solid #FFC726;
+	outline-offset: 10px;
 }
 
 #leftModal {
@@ -137,11 +139,10 @@ h3 {
 }
 
 .modalImg {
-	width: 100%;
-	height: auto;
+	width: 20rem;
+	height: 20rem;
 	object-fit: cover;
 }
-
 
 /* 10. FOOTER */
 footer {
